@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<title>Untuk Manjaa</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+.container{
+background:white;
+width:650px;
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+h1{
+color:#ff4d6d;
+}
+
+p{
+font-size:18px;
+line-height:1.8;
+color:#444;
+}
+
+.signature{
+margin-top:30px;
+font-weight:bold;
+color:#ff4d6d;
+}
+
+button{
+margin-top:15px;
+margin-left:10px;
+padding:12px 30px;
+font-size:16px;
+border:none;
+border-radius:10px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff1f50;
+}
+
+.heart{
+position:fixed;
+top:-10px;
+font-size:20px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+
+</style>
+
+<script>
+
+function playSong(){
+document.getElementById("lagu").play();
+}
+
+function showMessage(){
+alert("Manjaa… Nanii masih sayang awak. Terima kasih untuk semua kenangan kita ❤️");
+
+// buka tab baru
+window.open("Kenangan.html","_blank");
+}
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*3+2)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},5000);
+}
+
+setInterval(createHeart,400);
+
+</script>
+
+</head>
+
+<body>
+
+<audio id="lagu" loop>
+<source src="C:\Users\Luqman Hakim\OneDrive\Desktop\ForManjaa\lagu.mp3.mp3" type="audio/mp3">
+</audio>
+
+<div class="container">
+
+<h1>Untuk Manjaa ❤️</h1>
+
+<p>
+Apapun keputusan Manjaa nanti, Nanii tetap doakan yang terbaik untuk Manjaa.
+Terima kasih sebab pernah hadir dalam hidup Nanii dan bagi banyak kenangan
+yang Nanii takkan pernah lupa.
+</p>
+
+<p>
+Kalau ini pengakhiran kita, Nanii terima dengan hati yang berat.
+Tapi Nanii cuma nak Manjaa tahu, Nanii pernah sayang Manjaa
+seikhlas hati Nanii.
+</p>
+
+<p>
+Nanii tak minta apa-apa pun sekarang, cuma satu…
+Jangan lupa ada seseorang dekat sini yang masih sayangkan
+awak, Adawiyah.
+</p>
+
+<p>
+Dan Nanii harap satu hari nanti kita boleh jumpa balik,
+dengan cerita yang lebih baik daripada sekarang.
+</p>
+
+<div class="signature">
+— Daripada Nanii
+</div>
+
+<br>
+
+<button onclick="playSong()">Tekan sini dulu Manjaa <3</button>
+<button onclick="showMessage()">Kalau dah Hbis baca tekan ni tau <3</button>
+
+</div>
+
+</body>
+</html>

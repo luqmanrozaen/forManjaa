@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<title>Kenangan Kita</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+text-align:center;
+color:white;
+min-height:100vh;
+overflow-x:hidden;
+}
+
+h1{
+margin-top:30px;
+font-size:38px;
+}
+
+p{
+margin-top:15px;
+font-size:18px;
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.7;
+}
+
+/* BUTTON */
+.love-btn{
+margin-top:20px;
+padding:12px 25px;
+font-size:16px;
+border:none;
+border-radius:25px;
+background:white;
+color:#ff4f81;
+cursor:pointer;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.love-btn:hover{
+transform:scale(1.1);
+}
+
+/* GALLERY */
+.gallery{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+/* CARD */
+.card{
+background:white;
+padding:10px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* IMAGE SIZE KECIL */
+.card img{
+width:200px;
+max-width:100%;
+border-radius:12px;
+}
+
+/* HEART */
+.heart{
+position:fixed;
+top:-10px;
+font-size:20px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+
+</style>
+
+<script>
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*3+2)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},5000);
+}
+
+setInterval(createHeart,400);
+
+function loveMessage(){
+alert("I Love You Manjaa ..... jangan tinggalkan Nanii tauu :(");
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Kenangan Kita ❤️</h1>
+
+<p>
+Setiap gambar dan setiap detik ini adalah kenangan yang
+Nanii takkan pernah lupa.  
+Walaupun apa pun yang jadi selepas ini,
+Manjaa akan sentiasa ada tempat dalam hati Nanii.
+</p>
+
+<button class="love-btn" onclick="loveMessage()">Tekan Sini Manjaa ❤️</button>
+
+<div class="gallery">
+
+<div class="card">
+<img src="Gambar2.jpeg">
+</div>
+
+<div class="card">
+<img src="Gambar6.jpeg">
+</div>
+
+<div class="card">
+<img src="Gambar7.jpeg">
+</div>
+
+</div>
+
+</body>
+</html>
